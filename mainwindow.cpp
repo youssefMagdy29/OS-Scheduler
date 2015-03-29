@@ -26,9 +26,6 @@ void MainWindow::numberOfProcessesChanged(int n) {
     int lastRow   = ui->tblWdt_process->rowCount() - 1;
     int loopCount = n - lastRow - 1;
 
-    qDebug() << lastRow;
-    qDebug() << loopCount;
-
     for (int i = 0; i < abs(loopCount); i++) {
         if (loopCount < 0)
             ui->tblWdt_process->removeRow(lastRow--);
@@ -36,4 +33,29 @@ void MainWindow::numberOfProcessesChanged(int n) {
             ui->tblWdt_process->insertRow(++lastRow);
 
     }
+}
+
+void MainWindow::FCFSToggled(bool isChecked) {
+
+}
+
+void MainWindow::SJFToggled(bool isChecked) {
+    if (isChecked)
+        ui->chkBox_preemption->setEnabled(true);
+    else
+        ui->chkBox_preemption->setEnabled(false);
+}
+
+void MainWindow::priorityToggled(bool isChecked) {
+    if (isChecked)
+        ui->chkBox_preemption->setEnabled(true);
+    else
+        ui->chkBox_preemption->setEnabled(false);
+}
+
+void MainWindow::roundRobinToggled(bool isChecked) {
+    if (isChecked)
+        ui->dblSpinBox_quantum->setEnabled(true);
+    else
+        ui->dblSpinBox_quantum->setEnabled(false);
 }
