@@ -63,7 +63,7 @@
        <height>22</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout1">
       <item>
        <widget class="QRadioButton" name="radioBtn_FCFS">
         <property name="sizePolicy">
@@ -118,7 +118,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QWidget" name="layoutWidget_2">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -127,7 +127,7 @@
        <height>22</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <layout class="QHBoxLayout" name="horizontalLayout2">
       <item>
        <widget class="QLabel" name="lbl_quantum">
         <property name="enabled">
@@ -159,9 +159,41 @@
       </item>
      </layout>
     </widget>
-    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget_2</zorder>
     <zorder>layoutWidget</zorder>
     <zorder>chkBox_preemption</zorder>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>195</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout3">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Number of processes </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spnBox_noOfPrcs">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>10000</number>
+       </property>
+       <property name="value">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QTableWidget" name="tblWdt_process">
     <property name="geometry">
@@ -195,38 +227,6 @@
       <string>Burst time</string>
      </property>
     </column>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>120</y>
-      <width>195</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Number of processes </string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSpinBox" name="spnBox_noOfPrcs">
-       <property name="minimum">
-        <number>1</number>
-       </property>
-       <property name="maximum">
-        <number>10000</number>
-       </property>
-       <property name="value">
-        <number>1</number>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </widget>
   </widget>
  </widget>
