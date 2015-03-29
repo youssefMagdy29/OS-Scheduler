@@ -38,7 +38,10 @@
     <property name="title">
      <string>Scheduler type</string>
     </property>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="chkBox_preemption">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>368</x>
@@ -120,13 +123,13 @@
       <rect>
        <x>10</x>
        <y>50</y>
-       <width>121</width>
+       <width>181</width>
        <height>22</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="lbl_quantum">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -142,9 +145,15 @@
        </widget>
       </item>
       <item>
-       <widget class="QDoubleSpinBox" name="doubleSpinBox">
+       <widget class="QDoubleSpinBox" name="dblSpinBox_quantum">
         <property name="enabled">
          <bool>false</bool>
+        </property>
+        <property name="decimals">
+         <number>5</number>
+        </property>
+        <property name="maximum">
+         <double>9999999999999999635896294965248.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -158,10 +167,10 @@
     <zorder>radioBtn_RoundRobin</zorder>
     <zorder>radioBtn_SJF</zorder>
     <zorder>radioBtn_FCFS</zorder>
-    <zorder>label_2</zorder>
-    <zorder>doubleSpinBox</zorder>
-    <zorder>checkBox</zorder>
-    <zorder>doubleSpinBox</zorder>
+    <zorder>lbl_quantum</zorder>
+    <zorder>dblSpinBox_quantum</zorder>
+    <zorder>chkBox_preemption</zorder>
+    <zorder>dblSpinBox_quantum</zorder>
    </widget>
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
