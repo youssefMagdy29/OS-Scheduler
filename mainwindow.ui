@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>556</width>
-    <height>453</height>
+    <height>473</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,12 +20,25 @@
       <x>30</x>
       <y>20</y>
       <width>491</width>
-      <height>62</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="title">
      <string>Scheduler type</string>
     </property>
+    <widget class="QCheckBox" name="checkBox">
+     <property name="geometry">
+      <rect>
+       <x>368</x>
+       <y>50</y>
+       <width>81</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Preemptive</string>
+     </property>
+    </widget>
     <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
@@ -39,7 +52,7 @@
       <item>
        <widget class="QRadioButton" name="radioBtn_FCFS">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -52,7 +65,7 @@
       <item>
        <widget class="QRadioButton" name="radioBtn_SJF">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -65,7 +78,7 @@
       <item>
        <widget class="QRadioButton" name="radioBtn_Priority">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -78,7 +91,7 @@
       <item>
        <widget class="QRadioButton" name="radioBtn_RoundRobin">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -88,24 +101,23 @@
         </property>
        </widget>
       </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+       <widget class="QLabel" name="label_2">
+        <property name="enabled">
+         <bool>true</bool>
         </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLabel" name="lbl_preemption">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -113,38 +125,37 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>Preemption:</string>
+         <string>Quantum</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="cmbBox_preemption">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
+       <widget class="QDoubleSpinBox" name="doubleSpinBox">
+        <property name="enabled">
+         <bool>false</bool>
         </property>
-        <item>
-         <property name="text">
-          <string>Preemptive</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Non Preemptive</string>
-         </property>
-        </item>
        </widget>
       </item>
      </layout>
     </widget>
+    <zorder>radioBtn_FCFS</zorder>
+    <zorder>radioBtn_SJF</zorder>
+    <zorder>radioBtn_Priority</zorder>
+    <zorder>radioBtn_RoundRobin</zorder>
+    <zorder>radioBtn_Priority</zorder>
+    <zorder>radioBtn_RoundRobin</zorder>
+    <zorder>radioBtn_SJF</zorder>
+    <zorder>radioBtn_FCFS</zorder>
+    <zorder>label_2</zorder>
+    <zorder>doubleSpinBox</zorder>
+    <zorder>checkBox</zorder>
+    <zorder>doubleSpinBox</zorder>
    </widget>
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>140</y>
+      <y>160</y>
       <width>491</width>
       <height>301</height>
      </rect>
@@ -177,7 +188,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>100</y>
+      <y>120</y>
       <width>195</width>
       <height>22</height>
      </rect>
@@ -186,7 +197,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Number of processes: </string>
+        <string>Number of processes </string>
        </property>
       </widget>
      </item>
