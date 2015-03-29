@@ -17,6 +17,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void numberOfProcessesChanged(int n);
 };
 
 #endif // MAINWINDOW_H

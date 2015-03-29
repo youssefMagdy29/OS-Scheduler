@@ -54,7 +54,7 @@
       <string>Preemptive</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -118,12 +118,12 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>50</y>
-       <width>181</width>
+       <width>297</width>
        <height>22</height>
       </rect>
      </property>
@@ -159,20 +159,11 @@
       </item>
      </layout>
     </widget>
-    <zorder>radioBtn_FCFS</zorder>
-    <zorder>radioBtn_SJF</zorder>
-    <zorder>radioBtn_Priority</zorder>
-    <zorder>radioBtn_RoundRobin</zorder>
-    <zorder>radioBtn_Priority</zorder>
-    <zorder>radioBtn_RoundRobin</zorder>
-    <zorder>radioBtn_SJF</zorder>
-    <zorder>radioBtn_FCFS</zorder>
-    <zorder>lbl_quantum</zorder>
-    <zorder>dblSpinBox_quantum</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
     <zorder>chkBox_preemption</zorder>
-    <zorder>dblSpinBox_quantum</zorder>
    </widget>
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QTableWidget" name="tblWdt_process">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -205,7 +196,7 @@
      </property>
     </column>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -223,9 +214,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox">
+      <widget class="QSpinBox" name="spnBox_noOfPrcs">
+       <property name="minimum">
+        <number>1</number>
+       </property>
        <property name="maximum">
-        <number>999999999</number>
+        <number>10000</number>
        </property>
        <property name="value">
         <number>1</number>
