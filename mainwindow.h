@@ -17,6 +17,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void numberOfProcessesChanged(int n);
+    void FCFSToggled(bool isChecked);
+    void SJFToggled(bool isChecked);
+    void priorityToggled(bool isChecked);
+    void roundRobinToggled(bool isChecked);
 };
 
 #endif // MAINWINDOW_H
