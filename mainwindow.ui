@@ -10,6 +10,18 @@
     <height>473</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>556</width>
+    <height>473</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>556</width>
+    <height>473</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>OS Scheduler</string>
   </property>
