@@ -22,6 +22,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+//updating table when number of processes is changed
 void MainWindow::numberOfProcessesChanged(int n) {
     int lastRow   = ui->tblWdt_process->rowCount() - 1;
     int loopCount = n - lastRow - 1;
@@ -34,11 +35,13 @@ void MainWindow::numberOfProcessesChanged(int n) {
     }
 }
 
+//FCFS check button state changed
 void MainWindow::FCFSToggled(bool isChecked) {
     if (isChecked)
         currType = FCFS;
 }
 
+//SJF check button state changed
 void MainWindow::SJFToggled(bool isChecked) {
     if (isChecked) {
         currType = SJF;
@@ -48,6 +51,7 @@ void MainWindow::SJFToggled(bool isChecked) {
         ui->chkBox_preemption->setEnabled(false);
 }
 
+//Priority check button state changed
 void MainWindow::priorityToggled(bool isChecked) {
     if (isChecked) {
         currType = PRIORITY;
@@ -57,11 +61,21 @@ void MainWindow::priorityToggled(bool isChecked) {
         ui->chkBox_preemption->setEnabled(false);
 }
 
+//Round Robin  check button state changed
 void MainWindow::roundRobinToggled(bool isChecked) {
     if (isChecked) {
         currType = ROUND_ROBIN;
+
         ui->dblSpinBox_quantum->setEnabled(true);
+
+        ui->tblWdt_process->insertColumn(3);
+        ui->tblWdt_process->setHorizontalHeaderItem(3, new QTableWidgetItem(QString("Priority")));
+        ui->tblWdt_process->horizontalHeader()->setDefaultSectionSize(118);
     }
-    else
+    else {
         ui->dblSpinBox_quantum->setEnabled(false);
+
+        ui->tblWdt_process->removeColumn(3);
+        ui->tblWdt_process->horizontalHeader()->setDefaultSectionSize(158);
+    }
 }
