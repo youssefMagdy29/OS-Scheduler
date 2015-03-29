@@ -31,31 +31,37 @@ void MainWindow::numberOfProcessesChanged(int n) {
             ui->tblWdt_process->removeRow(lastRow--);
         else
             ui->tblWdt_process->insertRow(++lastRow);
-
     }
 }
 
 void MainWindow::FCFSToggled(bool isChecked) {
-
+    if (isChecked)
+        currType = FCFS;
 }
 
 void MainWindow::SJFToggled(bool isChecked) {
-    if (isChecked)
+    if (isChecked) {
+        currType = SJF;
         ui->chkBox_preemption->setEnabled(true);
+    }
     else
         ui->chkBox_preemption->setEnabled(false);
 }
 
 void MainWindow::priorityToggled(bool isChecked) {
-    if (isChecked)
+    if (isChecked) {
+        currType = PRIORITY;
         ui->chkBox_preemption->setEnabled(true);
+    }
     else
         ui->chkBox_preemption->setEnabled(false);
 }
 
 void MainWindow::roundRobinToggled(bool isChecked) {
-    if (isChecked)
+    if (isChecked) {
+        currType = ROUND_ROBIN;
         ui->dblSpinBox_quantum->setEnabled(true);
+    }
     else
         ui->dblSpinBox_quantum->setEnabled(false);
 }
