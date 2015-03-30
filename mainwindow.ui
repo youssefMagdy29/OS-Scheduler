@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>556</width>
-    <height>473</height>
+    <height>503</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>556</width>
-    <height>473</height>
+    <height>503</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>556</width>
-    <height>473</height>
+    <height>503</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -227,6 +227,19 @@
       <string>Burst time</string>
      </property>
     </column>
+   </widget>
+   <widget class="QPushButton" name="btn_schedule">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>470</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Schedule</string>
+    </property>
    </widget>
   </widget>
  </widget>
