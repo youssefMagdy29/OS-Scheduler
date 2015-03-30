@@ -228,7 +228,7 @@
      </property>
     </column>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_schedule">
     <property name="geometry">
      <rect>
       <x>240</x>

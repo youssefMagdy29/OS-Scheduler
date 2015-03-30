@@ -17,6 +17,6 @@ SOURCES += main.cpp\
 
 HEADERS  += mainwindow.h\
          linkedlist.h \
-    process.h
+         process.h
 
 FORMS    += mainwindow.ui

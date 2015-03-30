@@ -5,20 +5,21 @@
 
 class Process {
 public:
-    Proccess(string name, int arrival_time,
-             int burst_time, int priority = 0) :
+    Process(std::string name, int arrival_time,
+            int burst_time, int priority = -1) :
         name(name),
         arrival_time(arrival_time),
         burst_time(burst_time),
         priority(priority)
     { }
-    string get_name()      { return name;         }
+
+    std::string get_name() { return name;         }
     int get_arrival_time() { return arrival_time; }
     int get_burst_time()   { return burst_time;   }
     int get_priority()     { return priority;     }
 
 private:
-    string name;
+    std::string name;
     int arrival_time;
     int burst_time;
     int priority;

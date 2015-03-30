@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "linkedlist.h"
+#include "process.h"
 
 namespace Ui {
 class MainWindow;
@@ -25,9 +27,11 @@ public:
 private:
     Ui::MainWindow *ui;
     int currType;
+    LinkedList<Process> *processes;
 
 private slots:
     void numberOfProcessesChanged(int n);
+    void scheduleButtonClicked();
     void FCFSToggled(bool isChecked);
     void SJFToggled(bool isChecked);
     void priorityToggled(bool isChecked);
